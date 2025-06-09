@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula Frenzy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>Formula Frenzy</h1>
+
+        <div class="info-panel">
+            <div id="score-display">Score: 0</div>
+            <div id="message-display">Make a formula to match the target!</div>
+        </div>
+
+        <div class="table">
+            <div class="card-area" id="target-area">
+                <h2>Target</h2>
+                <div class="card" id="target-card">?</div>
+            </div>
+            <div class="card-area" id="hand-area">
+                <h2>Your Hand</h2>
+                <!-- Player's cards will be inserted here by JavaScript -->
+            </div>
+        </div>
+
+        <div class="controls">
+            <input type="text" id="formula-input" placeholder="e.g., (11 + 5) / 2">
+            <button id="submit-btn">Submit Formula</button>
+            <button id="pass-btn">Pass (New Hand)</button>
+        </div>
+    </div>
+
+    <!-- We need a library to safely evaluate math formulas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.5.0/math.min.js"></script>
+    <!-- Our game logic file -->
+    <script src="script.js"></script>
+</body>
+</html>
